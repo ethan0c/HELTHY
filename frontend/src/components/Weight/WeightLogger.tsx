@@ -1,5 +1,6 @@
 // @ts-ignore
 import React, {useState, useEffect} from "react";
+import Button from "@mui/material/Button";
 import {Line} from "react-chartjs-2";
 import "../../utils/chartSetup"; // ensure this is loaded once in your app
 
@@ -84,12 +85,13 @@ function WeightLogger() {
 
     return (
         <div className="p-4 bg-gray-900 rounded-xl shadow-md text-white">
-            <button
+            <Button
+                variant="contained"
                 onClick={() => addWeight(75)}
                 className="mb-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded"
             >
                 Add Weight
-            </button>
+            </Button>
 
             <Line data={data} options={options}/>
         </div>
